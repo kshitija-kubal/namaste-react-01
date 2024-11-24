@@ -1,0 +1,7 @@
+1. Anything written inside script tag is treated as JS by browser.
+2. Browser has javascript engine which has all functions/apis. e.g. - document.getElementById
+3. DOM tree manipulation/interaction is the most costly in Browser.(All frameworks (React) try to optimize it using JS)
+4. React is called a Library (because it can work in small portions of HTML) as well as Framewrok
+** Different ways of using/pulling React into Project - 
+
+1. Using CDN - There are 2 links, one of which is "React.development.js" - core file of React and second is "react-dom.development.js" needed to modify and use on Document Object model to connect with browsers.(bridge between react and dom)

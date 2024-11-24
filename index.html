@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Order of files should be in this sequence
+     First, import React package and then only import App.js
+     Otherwise, it will throw error - "React is not defined" -->
+     <h1>This is a H1 Tag above root div</h1>
+    <div id="root">
+        <!-- Content inside div tag with ID - root will get replaced by content defined inside
+         App.js - Why ?
+         When Browser reads html file, it comes from top, it reads div tag with ID root, renders h1 tag inside it,
+         then it reads React file -> ReachDOM Element and then App.js, which in turn replaces h1 tag defined here with
+         tags defined inside App.js
+          -->
+        <h1>Root H1 Tag</h1>
+    </div>
+    <!-- Tags defined above and below root tag won't get affected and will be rendered.
+     Because they are not defined inside App.js file
+     If we define the, in App.js, they will to get replaced. -->
+    <h1>This is a H1 Tag below root div</h1>
+    <!-- What is cross origin ? -->
+     <!-- What if we don't defined id in div tag -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="./App.js"></script>
+</body>
+</html>
